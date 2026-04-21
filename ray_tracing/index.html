@@ -13,6 +13,8 @@
         <link rel="canonical" href="https://gameman101.github.io/GameDevDocs/ray_tracing/">
       
       
+        <link rel="prev" href="../rasterization/">
+      
       
       
         
@@ -275,6 +277,546 @@
   
 
       </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rasterization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rasterization
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ray tracing
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ray tracing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core-ray-tracing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core ray tracing
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core ray tracing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#whitted" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Whitted
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#distributed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Distributed
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#path-tracing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Path tracing
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Path tracing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unidirectional-path-tracing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unidirectional Path Tracing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bidirectional-path-tracing-bdpt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bidirectional Path Tracing (BDPT)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metropolis-light-transport-mlt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Metropolis Light Transport (MLT)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#progressive-path-tracing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Progressive Path Tracing
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#photon-based-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Photon-Based Methods
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Photon-Based Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#photon-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Photon Mapping
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#progressive-photon-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Progressive Photon Mapping
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#volumetric-participating-media" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Volumetric / Participating Media
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Volumetric / Participating Media">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#volumetric-ray-tracing-ray-marching" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Volumetric Ray Tracing / Ray Marching
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#specialised-hybrid-variants" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Specialised / Hybrid Variants
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Specialised / Hybrid Variants">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cone" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cone
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#beam-tracing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Beam Tracing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#irradiance-caching-radiance-caching" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Irradiance Caching / Radiance Caching
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vertex-connection-and-merging-vcm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vertex Connection and Merging (VCM)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adjoint-importance-driven-path-tracing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adjoint / Importance-Driven Path Tracing
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#real-time-variants-gpu-accelerated" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Real-Time Variants (GPU-accelerated)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Real-Time Variants (GPU-accelerated)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#real-time-ray-tracing-dxr-vulkan-rt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Real-Time Ray Tracing (DXR / Vulkan RT)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#real-time-ray-tracing-dxr-vulkan-rt_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Real-Time Ray Tracing (DXR / Vulkan RT)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#game-engines-and-there-ray-tracing-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Game Engines and there ray tracing types
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Game Engines and there ray tracing types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#godot46" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Godot(4.6)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unity
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Unity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ray-traced-ambient-occlusion-rtao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ray-Traced Ambient Occlusion (RTAO)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ray-traced-reflections-rtr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ray-Traced Reflections (RTR)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ray-traced-global-illumination-rtgi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ray-Traced Global Illumination (RTGI)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ray-traced-shadows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ray-Traced Shadows
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#path-tracing_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Path Tracing
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unreal-engine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unreal Engine
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Unreal Engine">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lumen-ue5s-default-gi-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lumen (UE5's Default GI System)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#legacy-explicit-hardware-ray-tracing-effects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Legacy / Explicit Hardware Ray Tracing Effects
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#path-tracer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Path Tracer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nvidia-rtx-branch-nvrtx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NVIDIA RTX Branch (NvRTX)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
