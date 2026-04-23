@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://gameman101.github.io/GameDevDocs/display/vsync/">
+        <link rel="canonical" href="https://gameman101.github.io/GameDevDocs/buffers/geometry_buffer/">
       
       
-        <link rel="prev" href="../anti_aliasing/">
+        <link rel="prev" href="../../display/vsync/">
       
       
-        <link rel="next" href="../../buffers/geometry_buffer/">
+        <link rel="next" href="../frame_buffer/">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>Vertical Synchronization (VSync) - GameDev Docs</title>
+        <title>The G-Buffer - GameDev Docs</title>
       
     
     
@@ -81,7 +81,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#vertical-sync-vsync" class="md-skip">
+        <a href="#geometry-buffer-g-buffer" class="md-skip">
           Skip to content
         </a>
       
@@ -117,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Vertical Synchronization (VSync)
+              The G-Buffer
             
           </span>
         </div>
@@ -373,20 +373,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -407,7 +405,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -425,7 +423,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../anti_aliasing/" class="md-nav__link">
+      <a href="../../display/anti_aliasing/" class="md-nav__link">
         
   
   
@@ -450,6 +448,90 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../../display/vsync/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vertical Synchronization (VSync)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pipeline & Buffers
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Pipeline & Buffers
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
     
   
   
@@ -469,7 +551,7 @@
   <span class="md-ellipsis">
     
   
-    Vertical Synchronization (VSync)
+    The G-Buffer
   
 
     
@@ -487,7 +569,7 @@
   <span class="md-ellipsis">
     
   
-    Vertical Synchronization (VSync)
+    The G-Buffer
   
 
     
@@ -513,10 +595,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-is-screen-tearing" class="md-nav__link">
+  <a href="#why-use-a-g-buffer" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What is Screen Tearing?
+        Why use a G-Buffer?
       
     </span>
   </a>
@@ -524,33 +606,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-vsync-works" class="md-nav__link">
+  <a href="#standard-g-buffer-components" class="md-nav__link">
     <span class="md-ellipsis">
       
-        How VSync Works
+        Standard G-Buffer Components
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#buffering" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Buffering
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Buffering">
+    <nav class="md-nav" aria-label="Standard G-Buffer Components">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#double-buffering" class="md-nav__link">
+  <a href="#1-diffuse-albedo-buffer" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Double Buffering
+        1. Diffuse / Albedo Buffer
       
     </span>
   </a>
@@ -558,10 +629,32 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#triple-buffering" class="md-nav__link">
+  <a href="#2-normal-buffer" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Triple Buffering
+        2. Normal Buffer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-depth-buffer-z-buffer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Depth Buffer (Z-Buffer)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-specular-roughness-buffer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Specular / Roughness Buffer
       
     </span>
   </a>
@@ -574,22 +667,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#types-of-vsync" class="md-nav__link">
+  <a href="#the-two-pass-process" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Types of VSync
+        The Two-Pass Process
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Types of VSync">
+    <nav class="md-nav" aria-label="The Two-Pass Process">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#standard-vsync-on" class="md-nav__link">
+  <a href="#pass-1-geometry-pass" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Standard VSync (On)
+        Pass 1: Geometry Pass
       
     </span>
   </a>
@@ -597,54 +690,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#adaptive-vsync-nvidia" class="md-nav__link">
+  <a href="#pass-2-lighting-pass" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Adaptive VSync (NVIDIA)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#adaptive-vsync-half-refresh-rate" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Adaptive VSync — Half Refresh Rate
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fast-sync-nvidia" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Fast Sync (NVIDIA)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#enhanced-sync-amd" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Enhanced Sync (AMD)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#g-sync-nvidia-freesync-amd" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        G-Sync (NVIDIA) / FreeSync (AMD)
+        Pass 2: Lighting Pass
       
     </span>
   </a>
@@ -657,32 +706,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#input-lag-comparison" class="md-nav__link">
+  <a href="#limitations" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Input Lag Comparison
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#when-to-use-what" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        When to Use What
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#common-misconceptions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Common Misconceptions
+        Limitations
       
     </span>
   </a>
@@ -698,60 +725,6 @@
 
               
             
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
-        
-          
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Pipeline & Buffers
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Pipeline & Buffers
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
               
                 
   
@@ -759,35 +732,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../buffers/geometry_buffer/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    The G-Buffer
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../buffers/frame_buffer/" class="md-nav__link">
+      <a href="../frame_buffer/" class="md-nav__link">
         
   
   
@@ -869,10 +814,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-is-screen-tearing" class="md-nav__link">
+  <a href="#why-use-a-g-buffer" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What is Screen Tearing?
+        Why use a G-Buffer?
       
     </span>
   </a>
@@ -880,33 +825,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-vsync-works" class="md-nav__link">
+  <a href="#standard-g-buffer-components" class="md-nav__link">
     <span class="md-ellipsis">
       
-        How VSync Works
+        Standard G-Buffer Components
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#buffering" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Buffering
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Buffering">
+    <nav class="md-nav" aria-label="Standard G-Buffer Components">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#double-buffering" class="md-nav__link">
+  <a href="#1-diffuse-albedo-buffer" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Double Buffering
+        1. Diffuse / Albedo Buffer
       
     </span>
   </a>
@@ -914,10 +848,32 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#triple-buffering" class="md-nav__link">
+  <a href="#2-normal-buffer" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Triple Buffering
+        2. Normal Buffer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-depth-buffer-z-buffer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Depth Buffer (Z-Buffer)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-specular-roughness-buffer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Specular / Roughness Buffer
       
     </span>
   </a>
@@ -930,22 +886,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#types-of-vsync" class="md-nav__link">
+  <a href="#the-two-pass-process" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Types of VSync
+        The Two-Pass Process
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Types of VSync">
+    <nav class="md-nav" aria-label="The Two-Pass Process">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#standard-vsync-on" class="md-nav__link">
+  <a href="#pass-1-geometry-pass" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Standard VSync (On)
+        Pass 1: Geometry Pass
       
     </span>
   </a>
@@ -953,54 +909,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#adaptive-vsync-nvidia" class="md-nav__link">
+  <a href="#pass-2-lighting-pass" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Adaptive VSync (NVIDIA)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#adaptive-vsync-half-refresh-rate" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Adaptive VSync — Half Refresh Rate
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fast-sync-nvidia" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Fast Sync (NVIDIA)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#enhanced-sync-amd" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Enhanced Sync (AMD)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#g-sync-nvidia-freesync-amd" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        G-Sync (NVIDIA) / FreeSync (AMD)
+        Pass 2: Lighting Pass
       
     </span>
   </a>
@@ -1013,32 +925,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#input-lag-comparison" class="md-nav__link">
+  <a href="#limitations" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Input Lag Comparison
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#when-to-use-what" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        When to Use What
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#common-misconceptions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Common Misconceptions
+        Limitations
       
     </span>
   </a>
@@ -1062,172 +952,55 @@
 
 
 
-<h1 id="vertical-sync-vsync">Vertical Sync (VSync)</h1>
-<p>Vertical Sync, commonly known as VSync, is a display technology that synchronizes
-the frame rate output of your GPU with the refresh rate of your monitor. It was
-originally developed to eliminate screen tearing.</p>
+<h1 id="geometry-buffer-g-buffer">Geometry Buffer (G-Buffer)</h1>
+<p>The <strong>G-Buffer</strong> is a collection of textures used in <strong>Deferred Rendering</strong> to store geometric information about a scene. Instead of calculating lighting immediately for every triangle, the renderer "defers" the lighting until a second pass, using the data stored in these buffers.</p>
 <hr />
-<h2 id="what-is-screen-tearing">What is Screen Tearing?</h2>
-<p>Screen tearing happens when the GPU sends a new frame to the monitor before it has
-finished displaying the previous one. This causes a visual artifact where the screen
-appears horizontally split, showing parts of two different frames at the same time.
-It is most noticeable in fast moving scenes.</p>
+<h2 id="why-use-a-g-buffer">Why use a G-Buffer?</h2>
+<p>In traditional "Forward Rendering," if two triangles overlap, the GPU might calculate the lighting for the triangle in the back, only to have the front triangle draw over it later. This is called <strong>Overdraw</strong> and it wastes performance.</p>
+<p>The G-Buffer solves this by rendering the scene's properties once, then calculating lighting only for the pixels that are actually visible to the camera.</p>
 <hr />
-<h2 id="how-vsync-works">How VSync Works</h2>
-<p>Your monitor refreshes at a fixed rate, measured in Hz (e.g. 60Hz = 60 times per
-second). Your GPU renders frames as fast as it can, which may be faster or slower
-than that refresh rate. VSync forces the GPU to wait until the monitor finishes
-displaying the current frame before sending the next one, keeping them in sync.</p>
+<h2 id="standard-g-buffer-components">Standard G-Buffer Components</h2>
+<p>A typical G-Buffer consists of several screen-sized textures, each storing a different piece of information:</p>
+<h3 id="1-diffuse-albedo-buffer">1. Diffuse / Albedo Buffer</h3>
+<p>Stores the "base color" of the objects without any lighting or shadows applied. It is essentially what the world would look like under perfectly flat, ambient light.</p>
+<h3 id="2-normal-buffer">2. Normal Buffer</h3>
+<p>Stores the world-space or view-space <strong>Surface Normals</strong> ($x, y, z$ directions). This tells the lighting engine which way each pixel is facing so it can calculate how light should bounce off it.</p>
+<h3 id="3-depth-buffer-z-buffer">3. Depth Buffer (Z-Buffer)</h3>
+<p>Stores the distance from the camera to the object. This is critical for positioning light sources in 3D space relative to the surfaces and for generating shadows.</p>
+<h3 id="4-specular-roughness-buffer">4. Specular / Roughness Buffer</h3>
+<p>Stores material properties, such as how "shiny" or "rough" a surface is. In a PBR (Physically Based Rendering) workflow, this might also include a "Metallic" map.</p>
 <hr />
-<h2 id="buffering">Buffering</h2>
-<h3 id="double-buffering">Double Buffering</h3>
-<p>The default method. Uses two buffers:
-- <strong>Front buffer</strong> → what the monitor is currently displaying
-- <strong>Back buffer</strong> → where the GPU is rendering the next frame</p>
-<p>When the GPU finishes a frame it waits for the monitor to finish its refresh cycle,
-then swaps the buffers. This eliminates tearing but forces the GPU to sit idle while
-waiting, which can cut performance nearly in half if frames take just slightly longer
-than the refresh interval. For example on a 60Hz monitor, if a frame takes just over
-16.67ms the framerate drops all the way to 30 FPS instead of nearly 60.</p>
-<h3 id="triple-buffering">Triple Buffering</h3>
-<p>Adds a third buffer so the GPU never has to sit idle. While one back buffer is
-waiting to be swapped to the front, the GPU keeps rendering into the second back
-buffer. This results in higher average framerates and smoother performance compared
-to double buffering. The tradeoff is slightly higher input lag and more VRAM usage.</p>
-<blockquote>
-<p><strong>Note:</strong> In DirectX, triple buffering is implemented as render-ahead rather than
-true triple buffering. True triple buffering (non-blocking) is mainly available
-in OpenGL.</p>
-</blockquote>
+<h2 id="the-two-pass-process">The Two-Pass Process</h2>
+<h3 id="pass-1-geometry-pass">Pass 1: Geometry Pass</h3>
+<p>The scene is rendered, and instead of a final image, the GPU outputs data into the textures mentioned above. At the end of this pass, no lighting has been calculated yet.</p>
+<h3 id="pass-2-lighting-pass">Pass 2: Lighting Pass</h3>
+<p>The GPU looks at every pixel in the G-Buffer. It takes the <strong>Normal</strong>, the <strong>Depth</strong>, and the <strong>Color</strong>, then calculates the final lighting for that single pixel. </p>
+<p>!!! success "The Advantage"
+    Because lighting is calculated in "screen space" during the second pass, the complexity of the scene depends on the <strong>resolution of the screen</strong>, not the <strong>number of triangles</strong> in the scene. This allows for hundreds of dynamic lights in a single frame.</p>
 <hr />
-<h2 id="types-of-vsync">Types of VSync</h2>
-<h3 id="standard-vsync-on">Standard VSync (On)</h3>
-<p>The classic implementation. Caps your framerate to the monitor's refresh rate and
-uses double buffering. Completely eliminates tearing when your GPU is faster than
-your refresh rate. However it introduces input lag and if your framerate drops even
-slightly below the refresh rate, it halves to the next divisor (e.g. 60 → 30 → 15).</p>
-<p><strong>Best for:</strong> Single player games where image quality matters more than responsiveness.</p>
-<hr />
-<h3 id="adaptive-vsync-nvidia">Adaptive VSync (NVIDIA)</h3>
-<p>A hybrid mode that dynamically toggles VSync on and off depending on your framerate:
-- <strong>Above refresh rate</strong> → VSync turns ON to prevent tearing
-- <strong>Below refresh rate</strong> → VSync turns OFF to prevent the framerate halving and stuttering</p>
-<p>This avoids the worst of both worlds — no tearing when you have headroom, no massive
-framerate drops when you don't. It cannot fully eliminate tearing or input lag so it
-is a compromise solution.</p>
-<p><strong>Best for:</strong> Games where your framerate fluctuates around your refresh rate.</p>
-<hr />
-<h3 id="adaptive-vsync-half-refresh-rate">Adaptive VSync — Half Refresh Rate</h3>
-<p>Works exactly like Adaptive VSync but uses half your refresh rate as the switching
-threshold instead of the full refresh rate. On a 60Hz monitor this means VSync
-activates at 30 FPS instead of 60 FPS.</p>
-<p><strong>Best for:</strong> Very demanding games where your framerate is consistently around half
-your refresh rate (e.g. 30 FPS on a 60Hz monitor).</p>
-<hr />
-<h3 id="fast-sync-nvidia">Fast Sync (NVIDIA)</h3>
-<p>Available on GTX 900 series and newer. Combines triple buffering with a non-blocking
-approach — the GPU renders freely without waiting, and the most recently completed
-frame is always picked for display, discarding any older waiting frames. This nearly
-eliminates tearing while keeping input lag very close to having VSync off entirely.</p>
-<p>The tradeoff is that it works best when your framerate is significantly higher than
-your refresh rate (ideally 2-3x). If your framerate is only slightly above your
-refresh rate, Fast Sync can actually introduce more latency than standard VSync.</p>
-<p><strong>Best for:</strong> Competitive games where your GPU is very powerful and framerates are
-well above the refresh rate.</p>
-<hr />
-<h3 id="enhanced-sync-amd">Enhanced Sync (AMD)</h3>
-<p>AMD's equivalent to NVIDIA's Fast Sync. Combines the triple buffering behavior of
-Fast Sync with the adaptive behavior of Adaptive VSync. When framerates drop below
-the refresh rate it disables sync entirely to avoid stuttering, similar to Adaptive
-VSync. When above the refresh rate it uses the latest completed frame like Fast Sync.</p>
-<p><strong>Best for:</strong> AMD GPU users who want low latency without tearing.</p>
-<hr />
-<h3 id="g-sync-nvidia-freesync-amd">G-Sync (NVIDIA) / FreeSync (AMD)</h3>
-<p>These are hardware-level adaptive sync technologies built into the monitor itself.
-Instead of locking the GPU to the monitor's refresh rate, they make the monitor
-dynamically match the GPU's output framerate. This eliminates both tearing and the
-input lag of traditional VSync simultaneously with no compromises.</p>
-<ul>
-<li><strong>G-Sync</strong> → NVIDIA proprietary, requires a G-Sync certified monitor</li>
-<li><strong>FreeSync</strong> → AMD open standard based on VESA Adaptive Sync, also supported by
-  NVIDIA GPUs on compatible monitors</li>
-</ul>
-<p><strong>Best for:</strong> Anyone who wants the best possible experience and has a compatible monitor.</p>
-<hr />
-<h2 id="input-lag-comparison">Input Lag Comparison</h2>
-<p>From highest to lowest input lag:</p>
+<h2 id="limitations">Limitations</h2>
 <table>
 <thead>
 <tr>
-<th>Method</th>
-<th>Input Lag</th>
-<th>Tearing</th>
+<th style="text-align: left;">Weakness</th>
+<th style="text-align: left;">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>VSync ON (double buffer, windowed)</td>
-<td>Highest</td>
-<td>None</td>
+<td style="text-align: left;"><strong>Memory Bandwidth</strong></td>
+<td style="text-align: left;">Writing to 4-5 textures at once is very heavy on GPU memory.</td>
 </tr>
 <tr>
-<td>VSync ON (double buffer, fullscreen)</td>
-<td>High</td>
-<td>None</td>
+<td style="text-align: left;"><strong>Transparency</strong></td>
+<td style="text-align: left;">G-Buffers struggle with glass or water because they can only store data for one "layer" of depth per pixel.</td>
 </tr>
 <tr>
-<td>Triple Buffering + VSync</td>
-<td>Medium-High</td>
-<td>None</td>
-</tr>
-<tr>
-<td>Adaptive VSync</td>
-<td>Medium</td>
-<td>Occasional</td>
-</tr>
-<tr>
-<td>Enhanced Sync / Fast Sync</td>
-<td>Very Low</td>
-<td>Rare</td>
-</tr>
-<tr>
-<td>VSync OFF (windowed)</td>
-<td>Very Low</td>
-<td>None (composited)</td>
-</tr>
-<tr>
-<td>VSync OFF (fullscreen)</td>
-<td>Lowest</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>G-Sync / FreeSync</td>
-<td>Lowest</td>
-<td>None</td>
+<td style="text-align: left;"><strong>Anti-Aliasing</strong></td>
+<td style="text-align: left;">Traditional MSAA (Multi-Sample Anti-Aliasing) is difficult to implement with a G-Buffer; most games use TAA or FXAA instead.</td>
 </tr>
 </tbody>
 </table>
-<hr />
-<h2 id="when-to-use-what">When to Use What</h2>
-<ul>
-<li><strong>Competitive multiplayer</strong> → VSync OFF or Fast Sync / Enhanced Sync</li>
-<li><strong>Single player, stable framerate</strong> → Standard VSync or G-Sync/FreeSync</li>
-<li><strong>Single player, unstable framerate</strong> → Adaptive VSync</li>
-<li><strong>Very demanding games at ~30fps</strong> → Adaptive VSync Half Refresh Rate</li>
-<li><strong>Best overall experience</strong> → G-Sync or FreeSync monitor</li>
-</ul>
-<hr />
-<h2 id="common-misconceptions">Common Misconceptions</h2>
-<p><strong>"VSync always causes input lag"</strong>
-Standard VSync does, but Fast Sync and Enhanced Sync have input lag comparable to
-having VSync completely disabled.</p>
-<p><strong>"Triple buffering always helps"</strong>
-In DirectX games triple buffering is actually render-ahead buffering which can add
-input lag. True non-blocking triple buffering is mainly an OpenGL feature.</p>
-<p><strong>"G-Sync/FreeSync is just fancy VSync"</strong>
-No — traditional VSync locks the GPU to the monitor. G-Sync/FreeSync locks the
-monitor to the GPU. This is a fundamental difference that eliminates the tradeoffs
-entirely.</p>
 
 
 
