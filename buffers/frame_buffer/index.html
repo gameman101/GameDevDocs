@@ -851,8 +851,7 @@
 
 
 <h1 id="the-frame-buffer">The Frame Buffer</h1>
-<p><span style="color: red;">This text is red</span>
-The <strong>Frame Buffer</strong> is a specialized region of Video RAM (VRAM) that contains the complete bitmapped image that will be sent to the display. It acts as the final destination for all rendering operations.</p>
+<p>The <strong>Frame Buffer</strong> is a specialized region of Video RAM (VRAM) that contains the complete bitmapped image that will be sent to the display. It acts as the final destination for all rendering operations.</p>
 <hr />
 <h2 id="how-it-works">How it Works</h2>
 <p>The Frame Buffer isn't just one block of data; it is composed of several "planes" of information that determine the final color and visibility of every pixel on your screen.</p>
@@ -868,7 +867,7 @@ The <strong>Frame Buffer</strong> is a specialized region of Video RAM (VRAM) th
 <p>If the GPU writes to the Frame Buffer at the same time the monitor is reading from it, the monitor might display the top half of a new frame and the bottom half of an old frame. This is known as <strong>Screen Tearing</strong>.</p>
 <h3 id="the-solution-double-buffering">The Solution: Double Buffering</h3>
 <p>Instead of one buffer, the GPU uses two:
-1.  <strong>The Front Buffer:</strong> The one currently being "read" by the monitor.
+1.  <strong><span style="color: red;">The Front Buffer:</span></strong> The one currently being "read" by the monitor.
 2.  <strong>The Back Buffer:</strong> The one the GPU is currently "writing" to.</p>
 <p>Once the GPU finishes drawing the entire frame in the <strong>Back Buffer</strong>, it performs a <strong>Swap</strong> (or "Flip"), turning the Back Buffer into the Front Buffer.</p>
 <hr />
