@@ -2,18 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://gameman101.github.io/GameDevDocs/</loc>
-         <lastmod>2026-04-21</lastmod>
+         <lastmod>2026-04-23</lastmod>
     </url>
     <url>
          <loc>https://gameman101.github.io/GameDevDocs/antialising/</loc>
-         <lastmod>2026-04-21</lastmod>
+         <lastmod>2026-04-23</lastmod>
     </url>
     <url>
          <loc>https://gameman101.github.io/GameDevDocs/rasterization/</loc>
-         <lastmod>2026-04-21</lastmod>
+         <lastmod>2026-04-23</lastmod>
     </url>
     <url>
          <loc>https://gameman101.github.io/GameDevDocs/ray_tracing/</loc>
-         <lastmod>2026-04-21</lastmod>
+         <lastmod>2026-04-23</lastmod>
+    </url>
+    <url>
+         <loc>https://gameman101.github.io/GameDevDocs/vsync/</loc>
+         <lastmod>2026-04-23</lastmod>
     </url>
 </urlset>
