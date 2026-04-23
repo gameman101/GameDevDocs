@@ -302,6 +302,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rasterization
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -318,6 +336,120 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-graphics-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Graphics Pipeline
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Graphics Pipeline">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-geometry-stage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Geometry Stage
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scan-conversion-depth" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scan Conversion &amp; Depth
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Scan Conversion &amp; Depth">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-rasterization-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Rasterization Step
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shading-fragments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shading &amp; Fragments
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Shading &amp; Fragments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-fragment-shader" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Fragment Shader
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#global-effects-approximations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Global Effects (Approximations)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -397,6 +529,109 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-graphics-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Graphics Pipeline
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Graphics Pipeline">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-geometry-stage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Geometry Stage
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scan-conversion-depth" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scan Conversion &amp; Depth
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Scan Conversion &amp; Depth">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-rasterization-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Rasterization Step
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shading-fragments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shading &amp; Fragments
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Shading &amp; Fragments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-fragment-shader" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Fragment Shader
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#global-effects-approximations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Global Effects (Approximations)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -413,6 +648,66 @@
 
 
 <h1 id="rasterization">Rasterization</h1>
+<p>Rasterization is the foundation of real-time computer graphics. Unlike ray tracing, which simulates the physics of light, rasterization projects 3D geometry onto a 2D pixel grid. It is the primary technique used by GPUs for video games and interactive applications due to its high performance.</p>
+<hr />
+<h2 id="the-graphics-pipeline">The Graphics Pipeline</h2>
+<h3 id="the-geometry-stage">The Geometry Stage</h3>
+<p>The process begins by transforming 3D vertex data through several coordinate spaces to determine where they sit on your screen.</p>
+<ul>
+<li><strong>Model → World Space:</strong> Positions objects within the global scene.</li>
+<li><strong>View Space:</strong> Reorients the world relative to the camera’s position.</li>
+<li><strong>Projection Space:</strong> Applies perspective, turning the 3D volume into a 2D coordinate system.</li>
+</ul>
+<p><strong>Vertex Shaders</strong> handle these transformations, allowing for effects like wind-blown grass or character skinning before the shape is "flattened."</p>
+<hr />
+<h2 id="scan-conversion-depth">Scan Conversion &amp; Depth</h2>
+<h3 id="the-rasterization-step">The Rasterization Step</h3>
+<p>Once the 2D coordinates of a triangle's vertices are determined, the hardware identifies which pixels fall within the triangle's boundaries.</p>
+<ul>
+<li><strong>Barycentric Interpolation:</strong> Used to smoothly blend data (like colors or textures) across the surface of the triangle between its three corners.</li>
+<li><strong>The Z-Buffer (Depth Testing):</strong> To solve the "visibility problem," the GPU stores the depth of every pixel. If a new triangle tries to draw over a pixel but is further away than what is already there, it is discarded.</li>
+</ul>
+<p>!!! info "Performance Note"
+    Rasterization's biggest strength is its "embarrassingly parallel" nature, allowing modern GPUs to process millions of triangles per second.</p>
+<hr />
+<h2 id="shading-fragments">Shading &amp; Fragments</h2>
+<h3 id="the-fragment-shader">The Fragment Shader</h3>
+<p>For every pixel identified during scan conversion, a <strong>Fragment Shader</strong> is executed to determine its final color.</p>
+<ol>
+<li><strong>Texture Mapping:</strong> Sampling 2D images (diffuse, normal, and roughness maps) to add detail to geometry.</li>
+<li><strong>Local Illumination:</strong> Using models like <strong>Blinn-Phong</strong> or <strong>PBR</strong> to calculate light interaction based on the surface normal.</li>
+<li><strong>Alpha Blending:</strong> Handling transparency by mixing the fragment color with the existing background color.</li>
+</ol>
+<hr />
+<h2 id="global-effects-approximations">Global Effects (Approximations)</h2>
+<p>Because rasterizers process triangles in isolation, they cannot natively "see" other objects. To simulate complex light behavior, we use specialized buffers:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Technique</th>
+<th style="text-align: left;">Purpose</th>
+<th style="text-align: left;">How it works</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Shadow Mapping</strong></td>
+<td style="text-align: left;">Shadows</td>
+<td style="text-align: left;">Renders the scene from the light's POV to see what is hidden.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>SSAO</strong></td>
+<td style="text-align: left;">Ambient Occlusion</td>
+<td style="text-align: left;">Darkens cracks and corners based on the depth buffer.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>SSR</strong></td>
+<td style="text-align: left;">Reflections</td>
+<td style="text-align: left;">Uses the pixels already on screen to "fake" reflections.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Weaknesses:</strong> Rasterization struggles with "off-screen" data. If a light source or reflecting object isn't currently visible to the camera, it usually disappears from the shadows or reflections.</p>
 
 
 
