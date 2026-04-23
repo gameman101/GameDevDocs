@@ -5,19 +5,19 @@
          <lastmod>2026-04-23</lastmod>
     </url>
     <url>
-         <loc>https://gameman101.github.io/GameDevDocs/anti_aliasing/</loc>
+         <loc>https://gameman101.github.io/GameDevDocs/display/anti_aliasing/</loc>
          <lastmod>2026-04-23</lastmod>
     </url>
     <url>
-         <loc>https://gameman101.github.io/GameDevDocs/rasterization/</loc>
+         <loc>https://gameman101.github.io/GameDevDocs/display/vsync/</loc>
          <lastmod>2026-04-23</lastmod>
     </url>
     <url>
-         <loc>https://gameman101.github.io/GameDevDocs/ray_tracing/</loc>
+         <loc>https://gameman101.github.io/GameDevDocs/rendering/rasterization/</loc>
          <lastmod>2026-04-23</lastmod>
     </url>
     <url>
-         <loc>https://gameman101.github.io/GameDevDocs/vsync/</loc>
+         <loc>https://gameman101.github.io/GameDevDocs/rendering/ray_tracing/</loc>
          <lastmod>2026-04-23</lastmod>
     </url>
 </urlset>

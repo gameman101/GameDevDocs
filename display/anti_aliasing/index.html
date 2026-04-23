@@ -10,31 +10,27 @@
       
       
       
-        <link rel="canonical" href="https://gameman101.github.io/GameDevDocs/anti_aliasing/">
+        <link rel="canonical" href="https://gameman101.github.io/GameDevDocs/display/anti_aliasing/">
       
       
-        <link rel="prev" href="../rasterization/">
-      
-      
-        <link rel="next" href="../vsync/">
       
       
         
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Anti-Aliasing (AA) - GameDev Docs</title>
+        <title>Anti-Aliasing - GameDev Docs</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -53,7 +49,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -97,7 +93,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="GameDev Docs" class="md-header__button md-logo" aria-label="GameDev Docs" data-md-component="logo">
+    <a href="../.." title="GameDev Docs" class="md-header__button md-logo" aria-label="GameDev Docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -117,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Anti-Aliasing (AA)
+              Anti-Aliasing
             
           </span>
         </div>
@@ -221,7 +217,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="GameDev Docs" class="md-nav__button md-logo" aria-label="GameDev Docs" data-md-component="logo">
+    <a href="../.." title="GameDev Docs" class="md-nav__button md-logo" aria-label="GameDev Docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -239,7 +235,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -313,7 +309,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ray_tracing/" class="md-nav__link">
+      <a href="../../ray_tracing.md" class="md-nav__link">
         
   
   
@@ -341,7 +337,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../rasterization/" class="md-nav__link">
+      <a href="../../rasterization.md" class="md-nav__link">
         
   
   
@@ -373,20 +369,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -407,7 +401,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -422,37 +416,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Anti-Aliasing (AA)
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../anti_aliasing.md" class="md-nav__link">
         
   
   
@@ -468,281 +435,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Introduction
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#why-it-matters" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Why It Matters
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#traditional-sampling-based-methods" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Traditional / Sampling-Based Methods
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Traditional / Sampling-Based Methods">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ssaa-supersampling-anti-aliasing" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        SSAA — Supersampling Anti-Aliasing
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#msaa-multisample-anti-aliasing" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        MSAA — Multisample Anti-Aliasing
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#csaa-eqaa-coverage-sampling-anti-aliasing" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        CSAA / EQAA — Coverage Sampling Anti-Aliasing
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#post-process-methods" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Post-Process Methods
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Post-Process Methods">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#fxaa-fast-approximate-anti-aliasing" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        FXAA — Fast Approximate Anti-Aliasing
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mlaa-morphological-anti-aliasing" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        MLAA — Morphological Anti-Aliasing
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#smaa-subpixel-morphological-anti-aliasing" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        SMAA — Subpixel Morphological Anti-Aliasing
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cmaa-conservative-morphological-anti-aliasing" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        CMAA — Conservative Morphological Anti-Aliasing
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#temporal-methods" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Temporal Methods
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Temporal Methods">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#taa-temporal-anti-aliasing" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        TAA — Temporal Anti-Aliasing
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#txaa-temporal-anti-aliasing-nvidia" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        TXAA — Temporal Anti-Aliasing (NVIDIA)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ai-machine-learning-methods" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        AI / Machine Learning Methods
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="AI / Machine Learning Methods">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#dlaa-deep-learning-anti-aliasing-nvidia" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        DLAA — Deep Learning Anti-Aliasing (NVIDIA)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dlss-deep-learning-super-sampling-nvidia" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        DLSS — Deep Learning Super Sampling (NVIDIA)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fsr-fidelityfx-super-resolution-amd" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        FSR — FidelityFX Super Resolution (AMD)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#xess-xe-super-sampling-intel" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        XeSS — Xe Super Sampling (Intel)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#quick-comparison" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Quick Comparison
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#which-should-you-use" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Which Should You Use
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -755,7 +447,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../vsync/" class="md-nav__link">
+      <a href="../../vsync.md" class="md-nav__link">
         
   
   
@@ -790,7 +482,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../about.md" class="md-nav__link">
+      <a href="../../about.md" class="md-nav__link">
         
   
   
@@ -1119,7 +811,7 @@ shape, resulting in a stepped, rough appearance.</p>
 blurring only the edges of objects rather than the entire image. The goal is to
 make edges appear smooth and continuous without noticeably softening the rest of
 the scene.</p>
-<p><img alt="Anti-aliasing coverage example" src="../images/coverage.png" /></p>
+<p><img alt="Anti-aliasing coverage example" src="images/coverage.png" /></p>
 <hr />
 <h2 id="why-it-matters">Why It Matters</h2>
 <p>Aliasing is most obvious on:
@@ -1448,10 +1140,10 @@ excessive blurring.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>
