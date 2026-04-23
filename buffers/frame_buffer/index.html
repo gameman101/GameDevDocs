@@ -866,9 +866,11 @@
 <h3 id="the-problem-screen-tearing">The Problem: Screen Tearing</h3>
 <p>If the GPU writes to the Frame Buffer at the same time the monitor is reading from it, the monitor might display the top half of a new frame and the bottom half of an old frame. This is known as <strong>Screen Tearing</strong>.</p>
 <h3 id="the-solution-double-buffering">The Solution: Double Buffering</h3>
-<p>Instead of one buffer, the GPU uses two:
-1.  <strong><span style="color: red;">The Front Buffer:</span></strong> The one currently being "read" by the monitor.
-2.  <strong>The Back Buffer:</strong> The one the GPU is currently "writing" to.</p>
+<p>Instead of one buffer, the GPU uses two:</p>
+<ol>
+<li><strong><span style="color: red;">The Front Buffer:</span></strong> The one currently being "read" by the monitor.  </li>
+<li><strong><span style="color: blue;">The Back Buffer:</span></strong> The one the GPU is currently "writing" to.</li>
+</ol>
 <p>Once the GPU finishes drawing the entire frame in the <strong>Back Buffer</strong>, it performs a <strong>Swap</strong> (or "Flip"), turning the Back Buffer into the Front Buffer.</p>
 <hr />
 <h2 id="buffer-operations">Buffer Operations</h2>
