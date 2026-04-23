@@ -13,6 +13,10 @@
         <link rel="canonical" href="https://gameman101.github.io/GameDevDocs/rendering/rasterization/">
       
       
+        <link rel="prev" href="../ray_tracing/">
+      
+      
+        <link rel="next" href="../../display/anti_aliasing/">
       
       
         
@@ -259,18 +263,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -291,7 +297,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -309,7 +315,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ray_tracing.md" class="md-nav__link">
+      <a href="../ray_tracing/" class="md-nav__link">
         
   
   
@@ -334,10 +340,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../rasterization.md" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rasterization
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -353,6 +386,121 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-graphics-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Graphics Pipeline
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Graphics Pipeline">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-geometry-stage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Geometry Stage
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scan-conversion-depth" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scan Conversion &amp; Depth
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Scan Conversion &amp; Depth">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-rasterization-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Rasterization Step
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shading-fragments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shading &amp; Fragments
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Shading &amp; Fragments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-fragment-shader" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Fragment Shader
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#global-effects-approximations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Global Effects (Approximations)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -419,7 +567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../anti_aliasing.md" class="md-nav__link">
+      <a href="../../display/anti_aliasing/" class="md-nav__link">
         
   
   
@@ -447,7 +595,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../vsync.md" class="md-nav__link">
+      <a href="../../display/vync.md" class="md-nav__link">
         
   
   

@@ -13,6 +13,8 @@
         <link rel="canonical" href="https://gameman101.github.io/GameDevDocs/display/anti_aliasing/">
       
       
+        <link rel="prev" href="../../rendering/rasterization/">
+      
       
       
         
@@ -23,7 +25,7 @@
     
     
       
-        <title>Anti-Aliasing - GameDev Docs</title>
+        <title>Anti-Aliasing (AA) - GameDev Docs</title>
       
     
     
@@ -113,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Anti-Aliasing
+              Anti-Aliasing (AA)
             
           </span>
         </div>
@@ -309,7 +311,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ray_tracing.md" class="md-nav__link">
+      <a href="../../rendering/ray_tracing/" class="md-nav__link">
         
   
   
@@ -337,7 +339,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../rasterization.md" class="md-nav__link">
+      <a href="../../rendering/rasterization/" class="md-nav__link">
         
   
   
@@ -369,18 +371,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -401,7 +405,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -416,10 +420,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../anti_aliasing.md" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anti-Aliasing (AA)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -435,6 +466,281 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introduction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-it-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why It Matters
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#traditional-sampling-based-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Traditional / Sampling-Based Methods
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Traditional / Sampling-Based Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ssaa-supersampling-anti-aliasing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SSAA — Supersampling Anti-Aliasing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#msaa-multisample-anti-aliasing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MSAA — Multisample Anti-Aliasing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csaa-eqaa-coverage-sampling-anti-aliasing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CSAA / EQAA — Coverage Sampling Anti-Aliasing
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#post-process-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Post-Process Methods
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Post-Process Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fxaa-fast-approximate-anti-aliasing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FXAA — Fast Approximate Anti-Aliasing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mlaa-morphological-anti-aliasing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MLAA — Morphological Anti-Aliasing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#smaa-subpixel-morphological-anti-aliasing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SMAA — Subpixel Morphological Anti-Aliasing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cmaa-conservative-morphological-anti-aliasing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CMAA — Conservative Morphological Anti-Aliasing
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#temporal-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Temporal Methods
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Temporal Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#taa-temporal-anti-aliasing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TAA — Temporal Anti-Aliasing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#txaa-temporal-anti-aliasing-nvidia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TXAA — Temporal Anti-Aliasing (NVIDIA)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ai-machine-learning-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI / Machine Learning Methods
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AI / Machine Learning Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dlaa-deep-learning-anti-aliasing-nvidia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DLAA — Deep Learning Anti-Aliasing (NVIDIA)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dlss-deep-learning-super-sampling-nvidia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DLSS — Deep Learning Super Sampling (NVIDIA)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fsr-fidelityfx-super-resolution-amd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FSR — FidelityFX Super Resolution (AMD)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xess-xe-super-sampling-intel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        XeSS — Xe Super Sampling (Intel)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Comparison
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#which-should-you-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Which Should You Use
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -447,7 +753,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../vsync.md" class="md-nav__link">
+      <a href="../vync.md" class="md-nav__link">
         
   
   
