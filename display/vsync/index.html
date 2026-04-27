@@ -13,10 +13,6 @@
         <link rel="canonical" href="https://gameman101.github.io/GameDevDocs/display/vsync/">
       
       
-        <link rel="prev" href="../anti_aliasing/">
-      
-      
-        <link rel="next" href="../../buffers/geometry_buffer/">
       
       
         
@@ -27,7 +23,7 @@
     
     
       
-        <title>Vertical Synchronization (VSync) - GameDev Docs</title>
+        <title>Vertical Sync (VSync) - GameDev Docs</title>
       
     
     
@@ -117,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Vertical Synchronization (VSync)
+              Vertical Sync (VSync)
             
           </span>
         </div>
@@ -373,20 +369,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -407,7 +401,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -424,15 +418,62 @@
   
   
   
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anti-Aliasing
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Anti-Aliasing
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../anti_aliasing/" class="md-nav__link">
+      <a href="../anti_aliasing/msaa/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Anti-Aliasing (AA)
+    MSAA
   
 
     
@@ -450,44 +491,17 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Vertical Synchronization (VSync)
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../anti_aliasing/fxaa/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Vertical Synchronization (VSync)
+    FXAA
   
 
     
@@ -496,202 +510,69 @@
   
 
       </a>
-      
-        
+    </li>
+  
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+              
+            
+              
+                
   
   
   
+  
+    <li class="md-nav__item">
+      <a href="../anti_aliasing/taa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
     
   
+    TAA
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#what-is-screen-tearing" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        What is Screen Tearing?
-      
-    </span>
-  </a>
+
+    
+  </span>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-vsync-works" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        How VSync Works
-      
-    </span>
-  </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#buffering" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Buffering
-      
-    </span>
-  </a>
+
+      </a>
+    </li>
   
-    <nav class="md-nav" aria-label="Buffering">
-      <ul class="md-nav__list">
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../anti_aliasing/ssaa/" class="md-nav__link">
         
-          <li class="md-nav__item">
-  <a href="#double-buffering" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Double Buffering
-      
-    </span>
-  </a>
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#triple-buffering" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Triple Buffering
-      
-    </span>
-  </a>
   
-</li>
-        
-      </ul>
-    </nav>
+  <span class="md-ellipsis">
+    
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#types-of-vsync" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Types of VSync
-      
-    </span>
-  </a>
+    SSAA
   
-    <nav class="md-nav" aria-label="Types of VSync">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#standard-vsync-on" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Standard VSync (On)
-      
-    </span>
-  </a>
+
+    
+  </span>
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#adaptive-vsync-nvidia" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Adaptive VSync (NVIDIA)
-      
-    </span>
-  </a>
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#adaptive-vsync-half-refresh-rate" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Adaptive VSync — Half Refresh Rate
-      
-    </span>
-  </a>
+
+      </a>
+    </li>
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fast-sync-nvidia" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Fast Sync (NVIDIA)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#enhanced-sync-amd" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Enhanced Sync (AMD)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#g-sync-nvidia-freesync-amd" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        G-Sync (NVIDIA) / FreeSync (AMD)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#input-lag-comparison" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Input Lag Comparison
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#when-to-use-what" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        When to Use What
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#common-misconceptions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Common Misconceptions
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
