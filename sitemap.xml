@@ -2,42 +2,70 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://gameman101.github.io/GameDevDocs/</loc>
-         <lastmod>2026-04-27</lastmod>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
          <loc>https://gameman101.github.io/GameDevDocs/buffers/frame_buffer/</loc>
-         <lastmod>2026-04-27</lastmod>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
          <loc>https://gameman101.github.io/GameDevDocs/buffers/geometry_buffer/</loc>
-         <lastmod>2026-04-27</lastmod>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
-         <loc>https://gameman101.github.io/GameDevDocs/display/vsync/</loc>
-         <lastmod>2026-04-27</lastmod>
+         <loc>https://gameman101.github.io/GameDevDocs/display/abiant_occlusion/adaptive_ssao/</loc>
+         <lastmod>2026-04-28</lastmod>
+    </url>
+    <url>
+         <loc>https://gameman101.github.io/GameDevDocs/display/abiant_occlusion/gtao/</loc>
+         <lastmod>2026-04-28</lastmod>
+    </url>
+    <url>
+         <loc>https://gameman101.github.io/GameDevDocs/display/abiant_occlusion/hbao%2B/</loc>
+         <lastmod>2026-04-28</lastmod>
+    </url>
+    <url>
+         <loc>https://gameman101.github.io/GameDevDocs/display/abiant_occlusion/hbao/</loc>
+         <lastmod>2026-04-28</lastmod>
+    </url>
+    <url>
+         <loc>https://gameman101.github.io/GameDevDocs/display/abiant_occlusion/hdao/</loc>
+         <lastmod>2026-04-28</lastmod>
+    </url>
+    <url>
+         <loc>https://gameman101.github.io/GameDevDocs/display/abiant_occlusion/ssao/</loc>
+         <lastmod>2026-04-28</lastmod>
+    </url>
+    <url>
+         <loc>https://gameman101.github.io/GameDevDocs/display/abiant_occlusion/ssdo/</loc>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
          <loc>https://gameman101.github.io/GameDevDocs/display/anti_aliasing/fxaa/</loc>
-         <lastmod>2026-04-27</lastmod>
+         <lastmod>2026-04-28</lastmod>
+    </url>
+    <url>
+         <loc>https://gameman101.github.io/GameDevDocs/display/anti_aliasing/intro%28AA%29/</loc>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
          <loc>https://gameman101.github.io/GameDevDocs/display/anti_aliasing/msaa/</loc>
-         <lastmod>2026-04-27</lastmod>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
          <loc>https://gameman101.github.io/GameDevDocs/display/anti_aliasing/ssaa/</loc>
-         <lastmod>2026-04-27</lastmod>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
          <loc>https://gameman101.github.io/GameDevDocs/display/anti_aliasing/taa/</loc>
-         <lastmod>2026-04-27</lastmod>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
          <loc>https://gameman101.github.io/GameDevDocs/rendering/rasterization/</loc>
-         <lastmod>2026-04-27</lastmod>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
          <loc>https://gameman101.github.io/GameDevDocs/rendering/ray_tracing/</loc>
-         <lastmod>2026-04-27</lastmod>
+         <lastmod>2026-04-28</lastmod>
     </url>
 </urlset>

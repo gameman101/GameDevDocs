@@ -10,13 +10,9 @@
       
       
       
-        <link rel="canonical" href="https://gameman101.github.io/GameDevDocs/display/anti_aliasing/msaa/">
+        <link rel="canonical" href="https://gameman101.github.io/GameDevDocs/display/abiant_occlusion/hbao%2B/">
       
       
-        <link rel="prev" href="../../../rendering/rasterization/">
-      
-      
-        <link rel="next" href="../fxaa/">
       
       
         
@@ -27,7 +23,7 @@
     
     
       
-        <title>MSAA - GameDev Docs</title>
+        <title>Hbao+ - GameDev Docs</title>
       
     
     
@@ -80,11 +76,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#multi-sample-anti-aliasing-msaa" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -117,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              MSAA
+              Hbao+
             
           </span>
         </div>
@@ -373,20 +364,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -407,7 +396,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -422,20 +411,18 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
         
           
           <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
@@ -456,7 +443,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -471,37 +458,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    MSAA
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../anti_aliasing/msaa/" class="md-nav__link">
         
   
   
@@ -517,186 +477,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Overview
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-it-works" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        How It Works
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="How It Works">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-sub-sample-generation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. Sub-Sample Generation
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-coverage-and-depth-testing" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Coverage and Depth Testing
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-fragment-shading" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Fragment Shading
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-resolve" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. Resolve
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#msaa-levels" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        MSAA Levels
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#memory-and-bandwidth-impact" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Memory and Bandwidth Impact
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Usage
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#per-sample-shading" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Per-Sample Shading
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#centroid-interpolation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Centroid Interpolation
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#alternatives" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Alternatives
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Summary
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#see-also" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        See Also
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -709,7 +489,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../fxaa/" class="md-nav__link">
+      <a href="../../anti_aliasing/fxaa/" class="md-nav__link">
         
   
   
@@ -737,7 +517,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../taa/" class="md-nav__link">
+      <a href="../../anti_aliasing/taa/" class="md-nav__link">
         
   
   
@@ -765,7 +545,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ssaa/" class="md-nav__link">
+      <a href="../../anti_aliasing/ssaa/" class="md-nav__link">
         
   
   
@@ -955,176 +735,6 @@
   
   
   
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Overview
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-it-works" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        How It Works
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="How It Works">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-sub-sample-generation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. Sub-Sample Generation
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-coverage-and-depth-testing" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Coverage and Depth Testing
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-fragment-shading" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Fragment Shading
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-resolve" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. Resolve
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#msaa-levels" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        MSAA Levels
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#memory-and-bandwidth-impact" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Memory and Bandwidth Impact
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Usage
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#per-sample-shading" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Per-Sample Shading
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#centroid-interpolation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Centroid Interpolation
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#alternatives" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Alternatives
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Summary
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#see-also" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        See Also
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -1141,217 +751,9 @@
 
 
 
-<h1 id="multi-sample-anti-aliasing-msaa">Multi-Sample Anti-Aliasing (MSAA)</h1>
-<p>Multi-Sample Anti-Aliasing (MSAA) is a hardware-accelerated technique used in real-time rendering to reduce the visual artifact known as <strong>aliasing</strong> — the "jagged edges" or "staircase" effect that appears on diagonal and curved geometry.</p>
-<hr />
-<h2 id="overview">Overview</h2>
-<p>When a triangle is rasterized, the GPU must decide which pixels it covers. Without anti-aliasing, a pixel is either fully inside or fully outside the triangle — a binary decision that produces hard, jagged boundaries. MSAA solves this by sampling each pixel <strong>multiple times</strong> at sub-pixel locations and averaging the results to produce a smoother edge.</p>
-<p>!!! info "Key Distinction"
-    MSAA only runs the fragment shader <strong>once per pixel</strong>, but performs the depth and stencil test at every sub-sample. This makes it significantly cheaper than Super-Sample Anti-Aliasing (SSAA), which shades at every sample.</p>
-<hr />
-<h2 id="how-it-works">How It Works</h2>
-<h3 id="1-sub-sample-generation">1. Sub-Sample Generation</h3>
-<p>For each pixel, the GPU generates <em>N</em> sample points arranged within the pixel's bounds (where <em>N</em> is the MSAA level, e.g. 2×, 4×, 8×). The exact positions follow a vendor-defined pattern designed to maximize coverage variety.</p>
-<pre><code>┌─────────────────┐
-│  · ─ ─ ─ ─ · │   4× MSAA sample positions
-│  │    ·        │   within a single pixel
-│       │    ·  │
-│  · ─ ─ ─ ─ · │
-└─────────────────┘
-</code></pre>
-<h3 id="2-coverage-and-depth-testing">2. Coverage and Depth Testing</h3>
-<p>The GPU evaluates each sub-sample against the triangle's coverage and the depth buffer independently. A sub-sample is "covered" if it falls inside the triangle's projected area.</p>
-<h3 id="3-fragment-shading">3. Fragment Shading</h3>
-<p>The fragment shader runs <strong>once per pixel</strong> (not once per sample), using the centre of the pixel (or a centroid-interpolated position) to compute the colour output.</p>
-<h3 id="4-resolve">4. Resolve</h3>
-<p>At the end of the frame, the multisample buffer is <strong>resolved</strong>: the <em>N</em> sample colours for each pixel are averaged into a single value, which is written to the final framebuffer.</p>
-<hr />
-<h2 id="msaa-levels">MSAA Levels</h2>
-<table>
-<thead>
-<tr>
-<th>Level</th>
-<th style="text-align: center;">Samples per Pixel</th>
-<th style="text-align: center;">Performance Cost</th>
-<th style="text-align: center;">Edge Quality</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>2×</td>
-<td style="text-align: center;">2</td>
-<td style="text-align: center;">Low</td>
-<td style="text-align: center;">Moderate</td>
-</tr>
-<tr>
-<td>4×</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">Medium</td>
-<td style="text-align: center;">Good</td>
-</tr>
-<tr>
-<td>8×</td>
-<td style="text-align: center;">8</td>
-<td style="text-align: center;">High</td>
-<td style="text-align: center;">Very Good</td>
-</tr>
-<tr>
-<td>16×</td>
-<td style="text-align: center;">16</td>
-<td style="text-align: center;">Very High</td>
-<td style="text-align: center;">Excellent</td>
-</tr>
-</tbody>
-</table>
-<p>!!! tip
-    <strong>4× MSAA</strong> is the most common choice in games and real-time applications, balancing image quality with GPU memory and bandwidth cost.</p>
-<hr />
-<h2 id="memory-and-bandwidth-impact">Memory and Bandwidth Impact</h2>
-<p>MSAA stores <em>N</em> depth, stencil, and colour samples per pixel in a <strong>multisample render target</strong>. This multiplies the render target's memory footprint by <em>N</em>:</p>
-<ul>
-<li>A 1920×1080 RGBA8 framebuffer at <strong>4× MSAA</strong> uses approximately <strong>32 MB</strong> instead of 8 MB.</li>
-<li>Bandwidth during the resolve pass increases proportionally.</li>
-</ul>
-<p>!!! warning "Deferred Rendering Incompatibility"
-    MSAA does not compose cleanly with <strong>deferred shading</strong> pipelines. The G-buffer stores per-pixel surface data, meaning MSAA sub-samples cannot be resolved before lighting is applied. Alternatives such as <a href="#alternatives">FXAA</a>, <a href="#alternatives">TAA</a>, or per-sample shading must be used instead.</p>
-<hr />
-<h2 id="usage">Usage</h2>
-<p>=== "OpenGL"</p>
-<pre><code>```c
-// Request a multisample framebuffer from your windowing library (e.g. GLFW)
-glfwWindowHint(GLFW_SAMPLES, 4);
+  <h1>Hbao+</h1>
 
-// Enable multisampling
-glEnable(GL_MULTISAMPLE);
-```
-</code></pre>
-<p>=== "Vulkan"</p>
-<pre><code>```c
-VkPipelineMultisampleStateCreateInfo multisampleState = {
-    .sType                = VK_STRUCTURE_TYPE_PIPELINE_MULTISAMPLE_STATE_CREATE_INFO,
-    .rasterizationSamples = VK_SAMPLE_COUNT_4_BIT,
-    .sampleShadingEnable  = VK_FALSE,
-};
-```
-</code></pre>
-<p>=== "Direct3D 11"</p>
-<pre><code>```cpp
-DXGI_SWAP_CHAIN_DESC scDesc = {};
-scDesc.SampleDesc.Count   = 4;   // 4× MSAA
-scDesc.SampleDesc.Quality = 0;
-```
-</code></pre>
-<p>=== "WebGPU"</p>
-<pre><code>```ts
-const texture = device.createTexture({
-  size: [canvas.width, canvas.height],
-  sampleCount: 4,
-  format: "bgra8unorm",
-  usage: GPUTextureUsage.RENDER_ATTACHMENT,
-});
-```
-</code></pre>
-<hr />
-<h2 id="per-sample-shading">Per-Sample Shading</h2>
-<p>By default, the fragment shader runs once per pixel. You can opt into running it <strong>once per sample</strong> for higher quality, at a cost equal to SSAA:</p>
-<p>=== "GLSL"</p>
-<pre><code>```glsl
-// Force per-sample evaluation
-in vec2 texCoord; // becomes per-sample when qualifier is used
 
-layout(location = 0) out vec4 fragColor;
-
-void main() {
-    fragColor = texture(uTexture, texCoord);
-}
-```
-</code></pre>
-<p>=== "Vulkan"</p>
-<pre><code>```c
-multisampleState.sampleShadingEnable  = VK_TRUE;
-multisampleState.minSampleShading     = 1.0f; // shade at every sample
-```
-</code></pre>
-<p>!!! note
-    Per-sample shading is rarely needed in practice and defeats the primary performance advantage of MSAA.</p>
-<hr />
-<h2 id="centroid-interpolation">Centroid Interpolation</h2>
-<p>When a pixel is only <strong>partially covered</strong> by a triangle, interpolated varyings evaluated at the pixel centre may lie outside the triangle, producing artefacts. <strong>Centroid interpolation</strong> moves the evaluation point to the centroid of the covered samples, keeping it inside the triangle.</p>
-<p>=== "GLSL"</p>
-<pre><code>```glsl
-centroid in vec2 texCoord;
-```
-</code></pre>
-<p>=== "HLSL"</p>
-<pre><code>```hlsl
-centroid float2 texCoord : TEXCOORD0;
-```
-</code></pre>
-<hr />
-<h2 id="alternatives">Alternatives</h2>
-<table>
-<thead>
-<tr>
-<th>Technique</th>
-<th style="text-align: center;">Type</th>
-<th style="text-align: center;">Works with Deferred?</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>SSAA</strong></td>
-<td style="text-align: center;">Spatial</td>
-<td style="text-align: center;">Yes</td>
-<td>Highest quality, highest cost</td>
-</tr>
-<tr>
-<td><strong>MSAA</strong></td>
-<td style="text-align: center;">Spatial</td>
-<td style="text-align: center;">Poorly</td>
-<td>Best quality-to-cost for forward rendering</td>
-</tr>
-<tr>
-<td><strong>FXAA</strong></td>
-<td style="text-align: center;">Post-process</td>
-<td style="text-align: center;">Yes</td>
-<td>Fast, blurs fine detail</td>
-</tr>
-<tr>
-<td><strong>SMAA</strong></td>
-<td style="text-align: center;">Post-process</td>
-<td style="text-align: center;">Yes</td>
-<td>Better edge detection than FXAA</td>
-</tr>
-<tr>
-<td><strong>TAA</strong></td>
-<td style="text-align: center;">Temporal</td>
-<td style="text-align: center;">Yes</td>
-<td>Industry standard; requires motion vectors</td>
-</tr>
-<tr>
-<td><strong>DLAA</strong></td>
-<td style="text-align: center;">AI-based</td>
-<td style="text-align: center;">Yes</td>
-<td>High quality, vendor-specific</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="summary">Summary</h2>
-<ul>
-<li>MSAA reduces geometric aliasing by testing coverage at multiple sub-pixel locations while keeping a single shading pass per pixel.</li>
-<li>It is well-suited to <strong>forward rendering</strong> pipelines and natively supported by all major graphics APIs.</li>
-<li>Choose your sample count based on your performance budget — <strong>4×</strong> is the practical sweet spot for most applications.</li>
-<li>For deferred pipelines or post-process stacks, consider <strong>TAA</strong> or <strong>SMAA</strong> instead.</li>
-</ul>
-<hr />
-<h2 id="see-also">See Also</h2>
-<ul>
-<li><a href="../rendering/rasterization.md">Rasterization Pipeline</a></li>
-<li><a href="../taa/">Temporal Anti-Aliasing (TAA)</a></li>
-<li><a href="../gpu/render-targets.md">Render Targets and Framebuffers</a></li>
-</ul>
 
 
 

@@ -81,7 +81,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#fast-aproxamate-anit-aliasing" class="md-skip">
+        <a href="#fxaa-fast-approximate-anti-aliasing" class="md-skip">
           Skip to content
         </a>
       
@@ -511,6 +511,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FXAA
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -527,6 +545,313 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-aliasing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Is Aliasing?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What Is Aliasing?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-fxaa-was-created" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why FXAA Was Created
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-fxaa-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How FXAA Works
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How FXAA Works">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-render-the-scene" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Render the Scene
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-detect-edges" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Detect Edges
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-detect-edge-direction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Detect Edge Direction
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-blend-pixels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Blend Pixels
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-it-is-called-approximate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why It Is Called Approximate
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-cost" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performance Cost
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advantages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advantages
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advantages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#very-fast" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Very Fast
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#smooths-the-entire-image" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Smooths the Entire Image
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#great-for-older-pcs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Great for Older PCs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easy-to-add" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Easy to Add
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disadvantages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Disadvantages
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Disadvantages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#blur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Blur
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lower-quality-than-newer-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lower Quality Than Newer Methods
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-miss-some-edges" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Can Miss Some Edges
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparison
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-to-use-fxaa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When To Use FXAA
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-to-avoid-fxaa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When To Avoid FXAA
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-games-that-used-fxaa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Games That Used FXAA
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Final Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -761,6 +1086,302 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-aliasing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Is Aliasing?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What Is Aliasing?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-fxaa-was-created" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why FXAA Was Created
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-fxaa-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How FXAA Works
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How FXAA Works">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-render-the-scene" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Render the Scene
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-detect-edges" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Detect Edges
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-detect-edge-direction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Detect Edge Direction
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-blend-pixels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Blend Pixels
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-it-is-called-approximate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why It Is Called Approximate
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-cost" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performance Cost
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advantages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advantages
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advantages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#very-fast" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Very Fast
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#smooths-the-entire-image" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Smooths the Entire Image
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#great-for-older-pcs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Great for Older PCs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easy-to-add" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Easy to Add
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disadvantages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Disadvantages
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Disadvantages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#blur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Blur
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lower-quality-than-newer-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lower Quality Than Newer Methods
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-miss-some-edges" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Can Miss Some Edges
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparison
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-to-use-fxaa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When To Use FXAA
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-to-avoid-fxaa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When To Avoid FXAA
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-games-that-used-fxaa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Games That Used FXAA
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Final Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -776,7 +1397,185 @@
 
 
 
-<h1 id="fast-aproxamate-anit-aliasing">Fast Aproxamate Anit-Aliasing</h1>
+<h1 id="fxaa-fast-approximate-anti-aliasing">FXAA (Fast Approximate Anti-Aliasing)</h1>
+<p>FXAA is a <strong>post-processing anti-aliasing technique</strong> used in games to reduce jagged edges after a frame has already been rendered. Instead of increasing geometry samples like older anti-aliasing methods, FXAA analyzes the final image and smooths visible edges using a fullscreen shader pass. It is known for being lightweight, fast, and effective on weaker hardware.</p>
+<hr />
+<h2 id="what-is-aliasing">What Is Aliasing?</h2>
+<p>Aliasing happens when diagonal or curved lines appear jagged because screens are made of square pixels. Since pixels cannot perfectly represent smooth angles, edges often look stair-stepped.</p>
+<h3 id="example">Example</h3>
+<p>Without anti-aliasing:</p>
+<pre><code>#####
+   #####
+      #####
+</code></pre>
+<p>With anti-aliasing:</p>
+<pre><code>#####
+ #####
+  #####
+</code></pre>
+<hr />
+<h2 id="why-fxaa-was-created">Why FXAA Was Created</h2>
+<p>Traditional anti-aliasing methods such as <strong>MSAA</strong> improve image quality but require more GPU power. This can lower frame rates, especially on older systems.</p>
+<p>FXAA was designed to solve that problem by offering:</p>
+<ul>
+<li>Fast performance</li>
+<li>Low GPU cost</li>
+<li>Easy implementation</li>
+<li>Full-screen smoothing</li>
+<li>Better FPS on lower-end hardware</li>
+</ul>
+<hr />
+<h2 id="how-fxaa-works">How FXAA Works</h2>
+<p>FXAA works after the scene has already been rendered.</p>
+<h3 id="step-1-render-the-scene">Step 1: Render the Scene</h3>
+<p>The game renders the normal frame first.</p>
+<p>After that, FXAA receives the completed image.</p>
+<h3 id="step-2-detect-edges">Step 2: Detect Edges</h3>
+<p>FXAA scans nearby pixels and looks for brightness contrast. Strong contrast usually means an edge is present.</p>
+<pre><code>Black Black White
+Black Black White
+Black Black White
+</code></pre>
+<h3 id="step-3-detect-edge-direction">Step 3: Detect Edge Direction</h3>
+<p>Once an edge is found, FXAA determines whether it is:</p>
+<ul>
+<li>Horizontal</li>
+<li>Vertical</li>
+<li>Diagonal</li>
+</ul>
+<p>This allows smoothing in the correct direction.</p>
+<h3 id="step-4-blend-pixels">Step 4: Blend Pixels</h3>
+<p>FXAA blends neighboring pixels along the edge to soften harsh transitions.</p>
+<p>Before:</p>
+<pre><code>Black White
+Black White
+Black White
+</code></pre>
+<p>After:</p>
+<pre><code>Black Gray
+Black LightGray
+Black White
+</code></pre>
+<p>This creates the illusion of a smoother line.</p>
+<hr />
+<h2 id="why-it-is-called-approximate">Why It Is Called Approximate</h2>
+<p>FXAA does not calculate real extra geometry samples. Instead, it estimates where edges are based on contrast in the final image.</p>
+<p>!!! info "Approximate Means Fast"
+    FXAA trades some accuracy for speed and efficiency.</p>
+<hr />
+<h2 id="performance-cost">Performance Cost</h2>
+<p>FXAA is one of the cheapest anti-aliasing methods available.</p>
+<p>Typical impact:</p>
+<ul>
+<li>One fullscreen shader pass</li>
+<li>Very low GPU usage</li>
+<li>Excellent for high FPS gaming</li>
+<li>Ideal for weaker systems</li>
+</ul>
+<hr />
+<h2 id="advantages">Advantages</h2>
+<h3 id="very-fast">Very Fast</h3>
+<p>FXAA has minimal performance cost.</p>
+<h3 id="smooths-the-entire-image">Smooths the Entire Image</h3>
+<p>It can reduce aliasing on:</p>
+<ul>
+<li>Polygon edges</li>
+<li>Transparent textures</li>
+<li>Fences</li>
+<li>Grass</li>
+<li>Shader effects</li>
+</ul>
+<h3 id="great-for-older-pcs">Great for Older PCs</h3>
+<p>Excellent when GPU power is limited.</p>
+<h3 id="easy-to-add">Easy to Add</h3>
+<p>Because it is post-processing, developers can implement it easily.</p>
+<hr />
+<h2 id="disadvantages">Disadvantages</h2>
+<h3 id="blur">Blur</h3>
+<p>The biggest weakness of FXAA is softness.</p>
+<p>It may reduce sharpness on:</p>
+<ul>
+<li>Text</li>
+<li>Fine textures</li>
+<li>User interfaces</li>
+</ul>
+<h3 id="lower-quality-than-newer-methods">Lower Quality Than Newer Methods</h3>
+<p>Modern methods like <strong>SMAA</strong>, <strong>TAA</strong>, and <strong>DLAA</strong> often produce cleaner results.</p>
+<h3 id="can-miss-some-edges">Can Miss Some Edges</h3>
+<p>Since FXAA relies on contrast detection, some edges may remain jagged.</p>
+<hr />
+<h2 id="comparison">Comparison</h2>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Quality</th>
+<th>Performance</th>
+<th>Blur</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FXAA</td>
+<td>Medium</td>
+<td>Excellent</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>MSAA</td>
+<td>High</td>
+<td>Medium</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>TAA</td>
+<td>High</td>
+<td>Good</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>SSAA</td>
+<td>Very High</td>
+<td>Heavy</td>
+<td>None</td>
+</tr>
+<tr>
+<td>SMAA</td>
+<td>High</td>
+<td>Good</td>
+<td>Low</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="when-to-use-fxaa">When To Use FXAA</h2>
+<p>FXAA is a strong choice when:</p>
+<ul>
+<li>You want maximum FPS</li>
+<li>Your GPU is older or weaker</li>
+<li>You play older games</li>
+<li>You need lightweight anti-aliasing</li>
+</ul>
+<hr />
+<h2 id="when-to-avoid-fxaa">When To Avoid FXAA</h2>
+<p>You may prefer another method when:</p>
+<ul>
+<li>You want maximum sharpness</li>
+<li>You dislike blur</li>
+<li>You have a strong GPU</li>
+<li>Better AA options are available</li>
+</ul>
+<hr />
+<h2 id="common-games-that-used-fxaa">Common Games That Used FXAA</h2>
+<ul>
+<li>Skyrim</li>
+<li>Battlefield 3</li>
+<li>Far Cry 3</li>
+<li>Many Unreal Engine titles</li>
+</ul>
+<hr />
+<h2 id="final-summary">Final Summary</h2>
+<p>FXAA is a fast and efficient anti-aliasing method that smooths jagged edges using image processing after rendering. It offers excellent performance with low GPU cost, but often introduces blur and lower image clarity compared to newer anti-aliasing technologies.</p>
 
 
 

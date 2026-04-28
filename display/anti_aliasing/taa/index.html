@@ -80,6 +80,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#taa-temporal-anti-aliasing" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -531,6 +536,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TAA
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -548,6 +573,307 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-aliasing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Is Aliasing?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-taa-was-created" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why TAA Was Created
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-taa-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How TAA Works
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How TAA Works">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-slight-camera-jitter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Slight Camera Jitter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-save-previous-frame-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Save Previous Frame Data
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-motion-vectors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Motion Vectors
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-blend-frames-together" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Blend Frames Together
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-it-is-called-temporal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why It Is Called Temporal
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-cost" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performance Cost
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advantages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advantages
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advantages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#excellent-motion-stability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Excellent Motion Stability
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#smooth-edges" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Smooth Edges
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#great-for-modern-engines" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Great For Modern Engines
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#helps-thin-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Helps Thin Details
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disadvantages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Disadvantages
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Disadvantages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#blur-softness" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Blur / Softness
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ghosting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ghosting
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input-clarity-loss" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Input Clarity Loss
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#needs-good-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Needs Good Implementation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparison
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-to-use-taa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When To Use TAA
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-to-avoid-taa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When To Avoid TAA
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-games-that-use-taa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Games That Use TAA
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Final Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -751,6 +1077,298 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-aliasing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Is Aliasing?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-taa-was-created" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why TAA Was Created
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-taa-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How TAA Works
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How TAA Works">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-slight-camera-jitter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Slight Camera Jitter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-save-previous-frame-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Save Previous Frame Data
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-motion-vectors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Motion Vectors
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-blend-frames-together" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Blend Frames Together
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-it-is-called-temporal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why It Is Called Temporal
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-cost" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performance Cost
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advantages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advantages
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advantages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#excellent-motion-stability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Excellent Motion Stability
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#smooth-edges" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Smooth Edges
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#great-for-modern-engines" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Great For Modern Engines
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#helps-thin-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Helps Thin Details
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disadvantages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Disadvantages
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Disadvantages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#blur-softness" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Blur / Softness
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ghosting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ghosting
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input-clarity-loss" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Input Clarity Loss
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#needs-good-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Needs Good Implementation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparison
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-to-use-taa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When To Use TAA
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-to-avoid-taa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When To Avoid TAA
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-games-that-use-taa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Games That Use TAA
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Final Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -767,9 +1385,183 @@
 
 
 
-  <h1>TAA</h1>
-
-
+<h1 id="taa-temporal-anti-aliasing">TAA (Temporal Anti-Aliasing)</h1>
+<p>TAA is a <strong>modern anti-aliasing technique</strong> used in games to reduce jagged edges, shimmering, and flickering over time. Unlike FXAA or MSAA, TAA uses information from <strong>previous frames</strong> and combines it with the current frame to create a smoother and more stable image.</p>
+<p>TAA is widely used in modern game engines because it improves motion stability and overall image quality.</p>
+<hr />
+<h2 id="what-is-aliasing">What Is Aliasing?</h2>
+<p>Aliasing happens when diagonal or curved edges appear jagged, or when small details flicker and shimmer during movement.</p>
+<p>Common examples:</p>
+<ul>
+<li>Stair-stepped edges</li>
+<li>Fences shimmering in motion</li>
+<li>Grass flickering</li>
+<li>Thin lines crawling while moving camera</li>
+</ul>
+<hr />
+<h2 id="why-taa-was-created">Why TAA Was Created</h2>
+<p>Older methods solved only parts of aliasing:</p>
+<ul>
+<li><strong>MSAA</strong> helped polygon edges</li>
+<li><strong>FXAA</strong> was fast but blurry</li>
+<li>Neither fully solved shimmering during motion</li>
+</ul>
+<p>TAA was designed to provide:</p>
+<ul>
+<li>Stable image during movement</li>
+<li>Smooth edges</li>
+<li>Reduced flicker</li>
+<li>Better modern rendering support</li>
+<li>Good balance of quality and performance</li>
+</ul>
+<hr />
+<h2 id="how-taa-works">How TAA Works</h2>
+<p>TAA works across multiple frames instead of only one frame.</p>
+<h3 id="step-1-slight-camera-jitter">Step 1: Slight Camera Jitter</h3>
+<p>Each frame is rendered with a tiny sub-pixel offset.</p>
+<p>This gives different sample positions every frame.</p>
+<p>Example:</p>
+<p>Frame 1 sample position:</p>
+<pre><code>+
+</code></pre>
+<p>Frame 2 sample position:</p>
+<pre><code>  +
+</code></pre>
+<p>Frame 3 sample position:</p>
+<pre><code> +
+</code></pre>
+<hr />
+<h3 id="step-2-save-previous-frame-data">Step 2: Save Previous Frame Data</h3>
+<p>The engine stores image information from earlier frames.</p>
+<hr />
+<h3 id="step-3-motion-vectors">Step 3: Motion Vectors</h3>
+<p>The engine calculates where pixels moved between frames using motion vectors.</p>
+<p>This helps align old frame data with the current frame.</p>
+<hr />
+<h3 id="step-4-blend-frames-together">Step 4: Blend Frames Together</h3>
+<p>Current frame data is combined with previous frames.</p>
+<p>This creates smoother edges and reduces flickering.</p>
+<hr />
+<h2 id="why-it-is-called-temporal">Why It Is Called Temporal</h2>
+<p>The word <strong>temporal</strong> means related to time.</p>
+<p>!!! info "Across Time"
+    TAA improves image quality by using multiple frames over time instead of only the current frame.</p>
+<hr />
+<h2 id="performance-cost">Performance Cost</h2>
+<p>TAA is usually efficient and popular in modern engines.</p>
+<p>Typical impact:</p>
+<ul>
+<li>Moderate GPU cost</li>
+<li>Lower than SSAA</li>
+<li>Often cheaper than high MSAA levels</li>
+<li>Requires motion vector processing</li>
+</ul>
+<hr />
+<h2 id="advantages">Advantages</h2>
+<h3 id="excellent-motion-stability">Excellent Motion Stability</h3>
+<p>Reduces shimmering and crawling edges while moving.</p>
+<h3 id="smooth-edges">Smooth Edges</h3>
+<p>Produces cleaner lines than many cheaper AA methods.</p>
+<h3 id="great-for-modern-engines">Great For Modern Engines</h3>
+<p>Works well with deferred rendering pipelines.</p>
+<h3 id="helps-thin-details">Helps Thin Details</h3>
+<p>Improves:</p>
+<ul>
+<li>Fences</li>
+<li>Grass</li>
+<li>Hair</li>
+<li>Wires</li>
+<li>Small geometry</li>
+</ul>
+<hr />
+<h2 id="disadvantages">Disadvantages</h2>
+<h3 id="blur-softness">Blur / Softness</h3>
+<p>TAA can make the image look softer.</p>
+<h3 id="ghosting">Ghosting</h3>
+<p>Fast-moving objects may leave trails or smears.</p>
+<h3 id="input-clarity-loss">Input Clarity Loss</h3>
+<p>Some players dislike reduced sharpness.</p>
+<h3 id="needs-good-implementation">Needs Good Implementation</h3>
+<p>Poor TAA can look bad.</p>
+<hr />
+<h2 id="comparison">Comparison</h2>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Quality</th>
+<th>Performance</th>
+<th>Blur</th>
+<th>Motion Stability</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FXAA</td>
+<td>Medium</td>
+<td>Excellent</td>
+<td>Medium</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>MSAA</td>
+<td>High</td>
+<td>Medium</td>
+<td>None</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>TAA</td>
+<td>High</td>
+<td>Good</td>
+<td>Medium</td>
+<td>Excellent</td>
+</tr>
+<tr>
+<td>SSAA</td>
+<td>Very High</td>
+<td>Heavy</td>
+<td>None</td>
+<td>High</td>
+</tr>
+<tr>
+<td>SMAA</td>
+<td>High</td>
+<td>Good</td>
+<td>Low</td>
+<td>Medium</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="when-to-use-taa">When To Use TAA</h2>
+<p>TAA is a strong choice when:</p>
+<ul>
+<li>You play modern AAA games</li>
+<li>You want stable visuals while moving</li>
+<li>You dislike shimmering</li>
+<li>You use higher resolutions or detailed scenes</li>
+</ul>
+<hr />
+<h2 id="when-to-avoid-taa">When To Avoid TAA</h2>
+<p>You may prefer another method when:</p>
+<ul>
+<li>You want maximum sharpness</li>
+<li>You notice ghosting</li>
+<li>You play competitive shooters</li>
+<li>You dislike soft image quality</li>
+</ul>
+<hr />
+<h2 id="common-games-that-use-taa">Common Games That Use TAA</h2>
+<ul>
+<li>Red Dead Redemption 2</li>
+<li>Cyberpunk 2077</li>
+<li>Elden Ring</li>
+<li>Many Unreal Engine titles</li>
+</ul>
+<hr />
+<h2 id="final-summary">Final Summary</h2>
+<p>TAA is a modern anti-aliasing method that combines current and previous frames to smooth edges and reduce flickering over time. It offers strong image stability and high quality, but can introduce blur and ghosting depending on implementation.</p>
 
 
 
